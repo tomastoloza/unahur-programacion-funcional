@@ -42,4 +42,3 @@ sumatoriaAlCuadrado :: Int -> Int
 sumatoriaAlCuadrado 0 = 0
 sumatoriaAlCuadrado 1 = 1
 sumatoriaAlCuadrado n = sumatoriaAlCuadrado (n-1) + n^2
-
