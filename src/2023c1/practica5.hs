@@ -1,3 +1,7 @@
+twice = \f x -> f (f x)
+twice :: (a->a) -> (a->a)
+
+
 {- 1. Dar expresiones lambda para las siguientes funciones.
 suma
 snd
@@ -13,7 +17,7 @@ second = \(_, y) -> y
 
 head1 = \(x, _) -> x
 
-twice twice = \x -> twice (twice x)
+--twice twice = \x -> twice (twice x)
 
 
 
@@ -37,3 +41,15 @@ flip1 :: (a -> b -> c) -> (b -> a -> c)
 
 --appFork (f, g) = h
 --    where h x = (f x, g x)
+
+
+{- 3. Teniendo en cuenta las definiciones anteriores, dar el tipo de las siguientes expresiones y escribirlas con expresiones lambda.
+
+apply fst :: (a -> b) -> a
+
+twice twice
+
+twice flip :: (a -> a -> c) -> (a -> a -> c)
+
+appDup appFork
+-}
