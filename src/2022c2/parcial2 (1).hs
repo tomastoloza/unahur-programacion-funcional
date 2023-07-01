@@ -56,3 +56,8 @@ foldP f g h (Or p1 p2) = h (foldP f g h p1) (foldP f g h p2)
 
 reemplazar :: Int -> Prop -> Prop -> Prop
 reemplazar x f = foldP (\y -> if x==y then f else Var y) Not Or
+
+
+reemplazarR x _ (Var x) = Var x
+reemplazarR x v1 (Not p) = Not (reemplazar x v1)
+reemplazarR x v1 (Then p q) = Then (reemplazar x v p) (reemplazar x v q)
